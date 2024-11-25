@@ -1,1 +1,188 @@
-<p>cadastro works!</p>
+<p class="h2 text-center text-primary my-4">Cadastro de Usuário</p>
+
+<form class="container" (ngSubmit)="onSubmit()" #cadastroForm="ngForm">
+  <div class="row g-4">
+
+    <!-- Nome Completo -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="NomeCompleto" class="form-label text-secondary">Nome Completo</label>
+        <input id="NomeCompleto" type="text" [(ngModel)]="nomeCompleto" name="nomeCompleto" class="form-control shadow-sm" required />
+      </div>
+    </div>
+
+    <!-- Nome Social -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="NomeSocial" class="form-label text-secondary">Nome Social</label>
+        <input id="NomeSocial" type="text" [(ngModel)]="nomeSocial" name="nomeSocial" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Nome da Mãe e Pai -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="NomeDaMae" class="form-label text-secondary">Nome da Mãe e do Pai</label>
+        <input id="NomeDaMae" type="text" [(ngModel)]="nomeDaMae" name="nomeDaMae" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Data de Nascimento -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="DataNascimento" class="form-label text-secondary">Data de Nascimento</label>
+        <input id="DataNascimento" type="date" [(ngModel)]="dataNascimento" name="dataNascimento" class="form-control shadow-sm" required />
+      </div>
+    </div>
+
+    <!-- Sexo -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="Sexo" class="form-label text-secondary">Sexo</label>
+        <select id="Sexo" [(ngModel)]="sexo" name="sexo" class="form-select shadow-sm" required>
+          <option value="" disabled selected>Selecione o Sexo</option>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+          <option value="Outro">Outro</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Nacionalidade -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="Nacionalidade" class="form-label text-secondary">Nacionalidade</label>
+        <input id="Nacionalidade" type="text" [(ngModel)]="nacionalidade" name="nacionalidade" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Município de Nascimento -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="MunicipioNascimento" class="form-label text-secondary">Município de Nascimento</label>
+        <input id="MunicipioNascimento" type="text" [(ngModel)]="municipioNascimento" name="municipioNascimento" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Raça/Cor -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="RacaCor" class="form-label text-secondary">Raça/Cor</label>
+        <input id="RacaCor" type="text" [(ngModel)]="racaCor" name="racaCor" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Frequenta Escola -->
+    <div class="col-md-6">
+      <div class="mb-3 form-check">
+        <input id="FrequentaEscola" type="checkbox" [(ngModel)]="frequentaEscola" name="frequentaEscola" class="form-check-input" />
+        <label for="FrequentaEscola" class="form-check-label text-secondary">Frequenta Escola?</label>
+      </div>
+    </div>
+
+    <!-- Escolaridade -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="Escolaridade" class="form-label text-secondary">Escolaridade</label>
+        <input id="Escolaridade" type="text" [(ngModel)]="escolaridade" name="escolaridade" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Situação Familiar -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="SituacaoFamiliar" class="form-label text-secondary">Situação Familiar</label>
+        <input id="SituacaoFamiliar" type="text" [(ngModel)]="situacaoFamiliar" name="situacaoFamiliar" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Estabelecimento de Vínculo -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="EstabelecimentoVinculo" class="form-label text-secondary">Estabelecimento de Vínculo</label>
+        <input id="EstabelecimentoVinculo" type="text" [(ngModel)]="estabelecimentoVinculo" name="estabelecimentoVinculo" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Deficiência -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="Deficiencia" class="form-label text-secondary">Deficiência</label>
+        <select id="Deficiencia" [(ngModel)]="deficiencia" name="deficiencia" class="form-select shadow-sm">
+          <option value="Nenhuma">Nenhuma</option>
+          <option value="Visual">Visual</option>
+          <option value="Auditiva">Auditiva</option>
+          <option value="Motora">Motora</option>
+          <option value="Intelectual">Intelectual</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Dados de Contato -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="ContatoCelular" class="form-label text-secondary">Celular</label>
+        <input id="ContatoCelular" type="tel" [(ngModel)]="dadosContatoCelular" name="dadosContatoCelular" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="ContatoResidencial" class="form-label text-secondary">Residencial</label>
+        <input id="ContatoResidencial" type="tel" [(ngModel)]="dadosContatoResidencial" name="dadosContatoResidencial" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="ContatoComercial" class="form-label text-secondary">Comercial</label>
+        <input id="ContatoComercial" type="tel" [(ngModel)]="dadosContatoComercial" name="dadosContatoComercial" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="ContatoEmail" class="form-label text-secondary">Email</label>
+        <input id="ContatoEmail" type="email" [(ngModel)]="dadosContatoEmail" name="dadosContatoEmail" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Origem do Endereço -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="OrigemEndereco" class="form-label text-secondary">Origem do Endereço</label>
+        <input id="OrigemEndereco" type="text" [(ngModel)]="origemEndereco" name="origemEndereco" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Dados do Endereço -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="DadosEndereco" class="form-label text-secondary">Dados do Endereço</label>
+        <input id="DadosEndereco" type="text" [(ngModel)]="dadosEndereco" name="dadosEndereco" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- CPF -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="CPF" class="form-label text-secondary">CPF</label>
+        <input id="CPF" type="text" [(ngModel)]="cpf" name="cpf" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Identidade -->
+    <div class="col-md-6">
+      <div class="mb-3">
+        <label for="Identidade" class="form-label text-secondary">Identidade</label>
+        <input id="Identidade" type="text" [(ngModel)]="identidade" name="identidade" class="form-control shadow-sm" />
+      </div>
+    </div>
+
+    <!-- Botão de Envio -->
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-success shadow-sm" [disabled]="!cadastroForm.form.valid">Enviar</button>
+    </div>
+
+  </div>
+</form>
