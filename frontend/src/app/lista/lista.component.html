@@ -1,6 +1,24 @@
-<p>lista works!</p>
+<p>Lista de Pacientes</p>
 <div *ngFor="let paciente of pacientes">
-    <b>{{paciente.nome}}</b><br>
-    <b>{{paciente.id}}</b><br>
-    <b>{{paciente.cpf}}</b><br>
+    <b>Nome:</b> {{paciente.nomeCompleto}}<br>
+    <b>ID:</b> {{paciente.id}}<br>
+    <b>Nome Social:</b> {{paciente.nomeSocial}}<br>
+    <b>Nome da Mãe:</b> {{paciente.nomeMae}}<br>
+    <b>Nome do Pai:</b> {{paciente.nomePai}}<br>
+    <b>CPF:</b> {{paciente.cpf}}<br>
+    <b>Data de Nascimento:</b> {{paciente.dataNascimento}}<br>
+    <b>Sexo:</b> {{paciente.sexo}}<br>
+    <b>Nacionalidade:</b> {{paciente.nacionalidade}}<br>
+    <b>Município de Nascimento:</b> {{paciente.municipioNascimento}}<br>
+    <b>Raça/Cor:</b> {{paciente.racaCor}}<br>
+    <b>Frequenta Escola:</b> {{paciente.frequentaEscola}}<br>
+    <b>Escolaridade:</b> {{paciente.escolaridade}}<br>
+    <b>Situação Familiar:</b> {{paciente.situacaoFamiliar}}<br>
+    <b>Vínculo com Estabelecimento:</b> {{paciente.vinculoEstabelecimento}}<br>
+    <b>Deficiência:</b> {{paciente.deficiencia}}<br>
+    <b>Contato Celular:</b> {{paciente.contatoCelular}}<br>
+    <b>Contato Residencial:</b> {{paciente.contatoResidencial}}<br>
+    <b>Contato Comercial:</b> {{paciente.contatoComercial}}<br>
+    <b>E-mail:</b> {{paciente.email}}<br>
+    <hr>
 </div>
