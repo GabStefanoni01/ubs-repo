@@ -1,1 +1,141 @@
-<p>cadastro works!</p>
+<div class="container py-5">
+  <h1 class="text-center mb-4">Cadastro de Paciente</h1>
+
+  <form>
+    <div class="mb-3">
+      <label for="id" class="form-label">ID</label>
+      <input type="text" id="id" class="form-control" [(ngModel)]="obj.id">
+    </div>
+
+    <div class="mb-3">
+      <label for="nome" class="form-label">Nome</label>
+      <input type="text" id="nome" class="form-control" [(ngModel)]="obj.nome">
+    </div>
+
+    <div class="mb-3">
+      <label for="cpf" class="form-label">CPF</label>
+      <input type="text" id="cpf" class="form-control" [(ngModel)]="obj.cpf">
+    </div>
+
+    <div class="mb-3">
+      <label for="nomeSocial" class="form-label">Nome Social</label>
+      <input type="text" id="nomeSocial" class="form-control" [(ngModel)]="obj.nomeSocial">
+    </div>
+
+    <div class="mb-3">
+      <label for="nomeMae" class="form-label">Nome da Mãe</label>
+      <input type="text" id="nomeMae" class="form-control" [(ngModel)]="obj.nomeMae">
+    </div>
+
+    <div class="mb-3">
+      <label for="dataNascimento" class="form-label">Data de Nascimento</label>
+      <input type="date" id="dataNascimento" class="form-control" [(ngModel)]="obj.dataNascimento">
+    </div>
+
+    <div class="mb-3">
+      <label for="sexo" class="form-label">Sexo</label>
+      <select id="sexo" class="form-select" [(ngModel)]="obj.sexo">
+        <option value="masculino">Masculino</option>
+        <option value="feminino">Feminino</option>
+        <option value="outro">Outro</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="nacionalidade" class="form-label">Nacionalidade</label>
+      <input type="text" id="nacionalidade" class="form-control" [(ngModel)]="obj.nacionalidade">
+    </div>
+
+    <div class="mb-3">
+      <label for="municipioNascimento" class="form-label">Município de Nascimento</label>
+      <input type="text" id="municipioNascimento" class="form-control" [(ngModel)]="obj.municipioNascimento">
+    </div>
+
+    <div class="mb-3">
+      <label for="racaCor" class="form-label">Raça/Cor</label>
+      <input type="text" id="racaCor" class="form-control" [(ngModel)]="obj.racaCor">
+    </div>
+
+    <div class="mb-3">
+      <label for="frequentaEscola" class="form-label">Frequenta Escola</label>
+      <select id="frequentaEscola" class="form-select" [(ngModel)]="obj.frequentaEscola">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label for="escolaridade" class="form-label">Escolaridade</label>
+      <input type="text" id="escolaridade" class="form-control" [(ngModel)]="obj.escolaridade">
+    </div>
+
+    <div class="mb-3">
+      <label for="situacaoFamiliar" class="form-label">Situação Familiar</label>
+      <input type="text" id="situacaoFamiliar" class="form-control" [(ngModel)]="obj.situacaoFamiliar">
+    </div>
+
+    <div class="mb-3">
+      <label for="estabelecimentoVinculo" class="form-label">Estabelecimento Vinculado</label>
+      <input type="text" id="estabelecimentoVinculo" class="form-control" [(ngModel)]="obj.estabelecimentoVinculo">
+    </div>
+
+    <div class="mb-3">
+      <label for="estabelecimentoCadastro" class="form-label">Estabelecimento Cadastro</label>
+      <input type="text" id="estabelecimentoCadastro" class="form-control" [(ngModel)]="obj.estabelecimentoCadastro">
+    </div>
+
+    <div class="mb-3">
+      <label for="deficiencia" class="form-label">Deficiência</label>
+      <input type="text" id="deficiencia" class="form-control" [(ngModel)]="obj.deficiencia">
+    </div>
+
+    <div class="mb-3">
+      <label for="deficienciaDetalhe" class="form-label">Detalhe da Deficiência</label>
+      <input type="text" id="deficienciaDetalhe" class="form-control" [(ngModel)]="obj.deficienciaDetalhe">
+    </div>
+
+    <div class="mb-3">
+      <label for="origemEndereco" class="form-label">Origem do Endereço</label>
+      <input type="text" id="origemEndereco" class="form-control" [(ngModel)]="obj.origemEndereco">
+    </div>
+
+    <div class="mb-3">
+      <label for="endereco" class="form-label">Endereço</label>
+      <input type="text" id="endereco" class="form-control" [(ngModel)]="obj.endereco">
+    </div>
+
+    <div class="mb-3">
+      <label for="celular" class="form-label">Celular</label>
+      <input type="text" id="celular" class="form-control" [(ngModel)]="obj.celular">
+    </div>
+
+    <div class="mb-3">
+      <label for="residencial" class="form-label">Residencial</label>
+      <input type="text" id="residencial" class="form-control" [(ngModel)]="obj.residencial">
+    </div>
+
+    <div class="mb-3">
+      <label for="comercial" class="form-label">Comercial</label>
+      <input type="text" id="comercial" class="form-control" [(ngModel)]="obj.comercial">
+    </div>
+
+    <div class="mb-3">
+      <label for="contato" class="form-label">Contato</label>
+      <input type="text" id="contato" class="form-control" [(ngModel)]="obj.contato">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input type="email" id="email" class="form-control" [(ngModel)]="obj.email">
+    </div>
+
+    <div class="mb-3">
+      <label for="identidade" class="form-label">Identidade</label>
+      <input type="text" id="identidade" class="form-control" [(ngModel)]="obj.identidade">
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-primary" (click)="salvar();">Salvar</button>
+    </div>
+  </form>
+</div>
