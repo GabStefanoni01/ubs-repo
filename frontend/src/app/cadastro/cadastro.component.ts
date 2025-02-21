@@ -20,21 +20,20 @@ export class CadastroComponent {
   constructor(private service: PacienteService) { }
 
   public salvar() {
+    console.log("Enviando dados:", this.obj); // Debug para ver os dados antes de enviar
+
     this.service.salvar(this.obj).subscribe({
       next: (data) => {
         this.mensagem = "Paciente inserido com sucesso!";
-        
-        // Exibindo popup de confirmação
         alert(this.mensagem);
+        this.limpar(); // Agora só limpa após sucesso
       },
       error: (msg) => {
-        this.mensagem = "Ocorreu erro! Tente novamente mais tarde.";
-        
-        // Exibindo popup em caso de erro
+        this.mensagem = "Ocorreu um erro! Tente novamente mais tarde.";
         alert(this.mensagem);
+        console.error("Erro ao salvar:", msg); // Debug do erro
       }
     });
-    this.limpar();
   }
 
   public limpar() {

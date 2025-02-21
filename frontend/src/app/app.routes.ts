@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { CadastroComponent } from './cadastro/cadastro.component';
 import { ListaComponent } from './lista/lista.component';
+import { FormsModule } from '@angular/forms';
 import { UploadComponent } from './upload/upload.component';
 import path from 'path';
 import { Component } from '@angular/core';
